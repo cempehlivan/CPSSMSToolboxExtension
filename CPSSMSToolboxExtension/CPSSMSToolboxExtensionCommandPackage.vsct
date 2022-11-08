@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Commands package="guidCPSSMSToolboxExtensionCommandPackage">
+
+    <Menus>
+      <Menu guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="SubMenu" priority="0x0100" type="Menu">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="MyMenuGroup"/>
+        <CommandFlag>IconAndText</CommandFlag>
+        <Strings>
+          <ButtonText>Toolbox</ButtonText>
+          <CommandName>Toolbox</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_STANDARD"/>
+      </Group>
+
+      <Group guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="CSharpGroup" priority="0x0100">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="SubMenu"/>
+      </Group>
+
+      <Group guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="SQLGroup" priority="0x0200">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="SubMenu"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <!--<Button guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="TableCSharpClassId" priority="0x1151" type="Button">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="CSharpGroup" />
+        <Icon guid="CSharpIcon" id="CSharpIconImg" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>C# Class</ButtonText>
+        </Strings>
+      </Button>-->
+
+      <!--<Button guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="TableCSharpDBSaveMethodId" priority="0x1152" type="Button">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="CSharpGroup" />
+        <Icon guid="CSharpIcon" id="CSharpIconImg" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>C# DB Save Method</ButtonText>
+        </Strings>
+      </Button>-->
+
+      <!--<Button guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="TableSQLIUProcedure" priority="0x1251" type="Button">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="SQLGroup" />
+        <Icon guid="SQLIcon" id="SQLIconImg" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>SQL I/U Procedure</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="TableSQLSelectProcedure" priority="0x1252" type="Button">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="SQLGroup" />
+        <Icon guid="SQLIcon" id="SQLIconImg" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>SQL Select Procedure</ButtonText>
+        </Strings>
+      </Button>-->
+
+      <!--<Button guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="TableSQLLogTableTrigger" priority="0x1253" type="Button">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="SQLGroup" />
+        <Icon guid="SQLIcon" id="SQLIconImg" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>SQL Log Table/Trigger</ButtonText>
+        </Strings>
+      </Button>-->
+
+      <Button guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="CreateWhoIsActiveSP" priority="0x1254" type="Button">
+        <Parent guid="CPSSMSToolboxExtensionCommandPackageCmdSet" id="SQLGroup" />
+        <Icon guid="SQLIcon" id="SQLIconImg" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>SQL SP_WhoIsActive</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\Command.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+      <Bitmap guid="logoIcon" href="Resources\logo.ico" usedList="logoIconImg"/>
+      <Bitmap guid="CSharpIcon" href="Resources\csharp.ico" usedList="CSharpIconImg"/>
+      <Bitmap guid="SQLIcon" href="Resources\sql.ico" usedList="SQLIconImg"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidCPSSMSToolboxExtensionCommandPackage" value="{7214E7E3-B33C-4ED6-BC08-7C0B9C35070A}" />
+
+    <GuidSymbol name="CPSSMSToolboxExtensionCommandPackageCmdSet" value="{1651C494-8C78-4BF3-895B-6C1F84F7E1C8}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="SubMenu" value="0x1100"/>
+      <IDSymbol name="CSharpGroup" value="0x1150"/>
+      <IDSymbol name="TableCSharpClassId" value="0x1151" />
+      <IDSymbol name="TableCSharpDBSaveMethodId" value="0x1152"/>
+      <IDSymbol name="SQLGroup" value="0x1250"/>
+      <IDSymbol name="TableSQLIUProcedure" value="0x1251"/>
+      <IDSymbol name="TableSQLSelectProcedure" value="0x1252"/>
+      <IDSymbol name="TableSQLLogTableTrigger" value="0x1253"/>
+      <IDSymbol name="CreateWhoIsActiveSP" value="0x1254"/>
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{F08F12DB-BF69-4CA8-957C-95413FEB70BF}" >
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+      <IDSymbol name="logoIcon" value="7" />
+    </GuidSymbol>
+
+    <GuidSymbol name="logoIcon" value="{6E6D998E-B57D-428A-B848-57E01F0ED2DC}" >
+      <IDSymbol name="logoIconImg" value="1" />
+    </GuidSymbol>
+
+    <GuidSymbol name="CSharpIcon" value="{E36D2285-3452-4364-9D1D-FA29A0405C03}" >
+      <IDSymbol name="CSharpIconImg" value="1" />
+    </GuidSymbol>
+
+    <GuidSymbol name="SQLIcon" value="{240F81B5-5110-4F7B-9552-74266878EEB9}" >
+      <IDSymbol name="SQLIconImg" value="1" />
+    </GuidSymbol>
+
+  </Symbols>
+</CommandTable>

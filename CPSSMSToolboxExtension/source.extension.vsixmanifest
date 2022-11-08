@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="cpssmstoolboxextension.FA936D3F-6174-4881-927E-4A1198F8FDDC" Version="1.0" Language="en-US" Publisher="Cem PEHLİVAN" />
+        <DisplayName>CPSSMSToolboxExtension</DisplayName>
+        <Description xml:space="preserve">CPSSMSToolboxExtension</Description>
+        <Icon>Resources\logo.ico</Icon>
+        <PreviewImage>Resources\logo.ico</PreviewImage>
+    </Metadata>
+    <Installation AllUsers="true">
+        <InstallationTarget Id="ssms" Version="[14.0,19.0)" />
+        <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.IntegratedShell" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+        <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" d:Source="Installed" Version="[14.0]" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.Azure.ServiceFabric.Tools" Version="[14.0,19.0)" DisplayName="Ssms" />
+    </Prerequisites>
+</PackageManifest>
